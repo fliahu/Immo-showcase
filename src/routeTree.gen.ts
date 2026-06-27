@@ -9,8 +9,68 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WallworksRouteImport } from './routes/wallworks'
+import { Route as VoltworksRouteImport } from './routes/voltworks'
+import { Route as SmoothSurfacesRouteImport } from './routes/smooth-surfaces'
+import { Route as PlasterAndPaintRouteImport } from './routes/plaster-and-paint'
+import { Route as KitchenCraftRouteImport } from './routes/kitchen-craft'
+import { Route as FlatfixProRouteImport } from './routes/flatfix-pro'
+import { Route as CircuitMedicRouteImport } from './routes/circuit-medic'
+import { Route as ChefsKitchenCoRouteImport } from './routes/chefs-kitchen-co'
+import { Route as BathlineRouteImport } from './routes/bathline'
+import { Route as AquaBathStudioRouteImport } from './routes/aqua-bath-studio'
 import { Route as IndexRouteImport } from './routes/index'
 
+const WallworksRoute = WallworksRouteImport.update({
+  id: '/wallworks',
+  path: '/wallworks',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VoltworksRoute = VoltworksRouteImport.update({
+  id: '/voltworks',
+  path: '/voltworks',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SmoothSurfacesRoute = SmoothSurfacesRouteImport.update({
+  id: '/smooth-surfaces',
+  path: '/smooth-surfaces',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlasterAndPaintRoute = PlasterAndPaintRouteImport.update({
+  id: '/plaster-and-paint',
+  path: '/plaster-and-paint',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KitchenCraftRoute = KitchenCraftRouteImport.update({
+  id: '/kitchen-craft',
+  path: '/kitchen-craft',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FlatfixProRoute = FlatfixProRouteImport.update({
+  id: '/flatfix-pro',
+  path: '/flatfix-pro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CircuitMedicRoute = CircuitMedicRouteImport.update({
+  id: '/circuit-medic',
+  path: '/circuit-medic',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChefsKitchenCoRoute = ChefsKitchenCoRouteImport.update({
+  id: '/chefs-kitchen-co',
+  path: '/chefs-kitchen-co',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BathlineRoute = BathlineRouteImport.update({
+  id: '/bathline',
+  path: '/bathline',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AquaBathStudioRoute = AquaBathStudioRouteImport.update({
+  id: '/aqua-bath-studio',
+  path: '/aqua-bath-studio',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +79,172 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/aqua-bath-studio': typeof AquaBathStudioRoute
+  '/bathline': typeof BathlineRoute
+  '/chefs-kitchen-co': typeof ChefsKitchenCoRoute
+  '/circuit-medic': typeof CircuitMedicRoute
+  '/flatfix-pro': typeof FlatfixProRoute
+  '/kitchen-craft': typeof KitchenCraftRoute
+  '/plaster-and-paint': typeof PlasterAndPaintRoute
+  '/smooth-surfaces': typeof SmoothSurfacesRoute
+  '/voltworks': typeof VoltworksRoute
+  '/wallworks': typeof WallworksRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/aqua-bath-studio': typeof AquaBathStudioRoute
+  '/bathline': typeof BathlineRoute
+  '/chefs-kitchen-co': typeof ChefsKitchenCoRoute
+  '/circuit-medic': typeof CircuitMedicRoute
+  '/flatfix-pro': typeof FlatfixProRoute
+  '/kitchen-craft': typeof KitchenCraftRoute
+  '/plaster-and-paint': typeof PlasterAndPaintRoute
+  '/smooth-surfaces': typeof SmoothSurfacesRoute
+  '/voltworks': typeof VoltworksRoute
+  '/wallworks': typeof WallworksRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/aqua-bath-studio': typeof AquaBathStudioRoute
+  '/bathline': typeof BathlineRoute
+  '/chefs-kitchen-co': typeof ChefsKitchenCoRoute
+  '/circuit-medic': typeof CircuitMedicRoute
+  '/flatfix-pro': typeof FlatfixProRoute
+  '/kitchen-craft': typeof KitchenCraftRoute
+  '/plaster-and-paint': typeof PlasterAndPaintRoute
+  '/smooth-surfaces': typeof SmoothSurfacesRoute
+  '/voltworks': typeof VoltworksRoute
+  '/wallworks': typeof WallworksRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/aqua-bath-studio'
+    | '/bathline'
+    | '/chefs-kitchen-co'
+    | '/circuit-medic'
+    | '/flatfix-pro'
+    | '/kitchen-craft'
+    | '/plaster-and-paint'
+    | '/smooth-surfaces'
+    | '/voltworks'
+    | '/wallworks'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/aqua-bath-studio'
+    | '/bathline'
+    | '/chefs-kitchen-co'
+    | '/circuit-medic'
+    | '/flatfix-pro'
+    | '/kitchen-craft'
+    | '/plaster-and-paint'
+    | '/smooth-surfaces'
+    | '/voltworks'
+    | '/wallworks'
+  id:
+    | '__root__'
+    | '/'
+    | '/aqua-bath-studio'
+    | '/bathline'
+    | '/chefs-kitchen-co'
+    | '/circuit-medic'
+    | '/flatfix-pro'
+    | '/kitchen-craft'
+    | '/plaster-and-paint'
+    | '/smooth-surfaces'
+    | '/voltworks'
+    | '/wallworks'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AquaBathStudioRoute: typeof AquaBathStudioRoute
+  BathlineRoute: typeof BathlineRoute
+  ChefsKitchenCoRoute: typeof ChefsKitchenCoRoute
+  CircuitMedicRoute: typeof CircuitMedicRoute
+  FlatfixProRoute: typeof FlatfixProRoute
+  KitchenCraftRoute: typeof KitchenCraftRoute
+  PlasterAndPaintRoute: typeof PlasterAndPaintRoute
+  SmoothSurfacesRoute: typeof SmoothSurfacesRoute
+  VoltworksRoute: typeof VoltworksRoute
+  WallworksRoute: typeof WallworksRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/wallworks': {
+      id: '/wallworks'
+      path: '/wallworks'
+      fullPath: '/wallworks'
+      preLoaderRoute: typeof WallworksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/voltworks': {
+      id: '/voltworks'
+      path: '/voltworks'
+      fullPath: '/voltworks'
+      preLoaderRoute: typeof VoltworksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/smooth-surfaces': {
+      id: '/smooth-surfaces'
+      path: '/smooth-surfaces'
+      fullPath: '/smooth-surfaces'
+      preLoaderRoute: typeof SmoothSurfacesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/plaster-and-paint': {
+      id: '/plaster-and-paint'
+      path: '/plaster-and-paint'
+      fullPath: '/plaster-and-paint'
+      preLoaderRoute: typeof PlasterAndPaintRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kitchen-craft': {
+      id: '/kitchen-craft'
+      path: '/kitchen-craft'
+      fullPath: '/kitchen-craft'
+      preLoaderRoute: typeof KitchenCraftRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/flatfix-pro': {
+      id: '/flatfix-pro'
+      path: '/flatfix-pro'
+      fullPath: '/flatfix-pro'
+      preLoaderRoute: typeof FlatfixProRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/circuit-medic': {
+      id: '/circuit-medic'
+      path: '/circuit-medic'
+      fullPath: '/circuit-medic'
+      preLoaderRoute: typeof CircuitMedicRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/chefs-kitchen-co': {
+      id: '/chefs-kitchen-co'
+      path: '/chefs-kitchen-co'
+      fullPath: '/chefs-kitchen-co'
+      preLoaderRoute: typeof ChefsKitchenCoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bathline': {
+      id: '/bathline'
+      path: '/bathline'
+      fullPath: '/bathline'
+      preLoaderRoute: typeof BathlineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aqua-bath-studio': {
+      id: '/aqua-bath-studio'
+      path: '/aqua-bath-studio'
+      fullPath: '/aqua-bath-studio'
+      preLoaderRoute: typeof AquaBathStudioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,17 +257,17 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AquaBathStudioRoute: AquaBathStudioRoute,
+  BathlineRoute: BathlineRoute,
+  ChefsKitchenCoRoute: ChefsKitchenCoRoute,
+  CircuitMedicRoute: CircuitMedicRoute,
+  FlatfixProRoute: FlatfixProRoute,
+  KitchenCraftRoute: KitchenCraftRoute,
+  PlasterAndPaintRoute: PlasterAndPaintRoute,
+  SmoothSurfacesRoute: SmoothSurfacesRoute,
+  VoltworksRoute: VoltworksRoute,
+  WallworksRoute: WallworksRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
